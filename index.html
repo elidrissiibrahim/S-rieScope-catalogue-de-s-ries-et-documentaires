@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black ">
+    <header>
+        <div class="flex items-center gap-[20px] m-[10px] ">
+            <img src="assets/video.png" alt="" class="h-[40px] w-[40px] brightness-0 invert">
+            <p class="text-2xl text-white"><strong>Sériescope</strong></p>
+        </div>
+    </header>
+    <main>
+        <div class="flex flex-col m-[20px] p-[10px]">
+            <h1 class="text-white text-3xl">
+                <strong>Explore les séries TV</strong>
+            </h1>
+
+            <p class="text-[#BABABA]">
+                Retrouve tes séries préférées et enrichis le catalogue.
+            </p>
+        </div>
+
+        <section class="border rounded-2xl bg-[#191919] ml-[30px] mr-[30px] p-[20px]">
+
+            <h3 class="text-white font-bold">
+                Ajouter une série
+            </h3>
+
+            <p class="text-[#BABABA] mb-[20px]">
+                Les champs marqués d’un * sont obligatoires.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col gap-[5px] mb-[15px]">
+                    <label class="text-white" for="nom">
+                        Nom de la série *
+                    </label>
+
+                    <input
+                        class="border border-white rounded p-[10px] text-black border-[#393939] text-white placeholder:text-[#BABABA]"
+                        id="nom" type="text" placeholder="Ex. The Bear">
+                </div>
+
+                <div class="flex flex-col gap-[5px] mb-[15px]">
+                    <label class="text-white" for="genre">
+                        Genre(s) *
+                        <span class="text-[#BABABA]">
+                            séparés par des virgules
+                        </span>
+                    </label>
+
+                    <input class="border border-white rounded p-[10px] text-black text-white placeholder:text-[#BABABA]"
+                        id="genre" type="text" placeholder="Ex. Drame, Comédie">
+                </div>
+            </div>
+            <div class="flex flex-col gap-[5px] mb-[15px]">
+                <label class="text-white" for="description">
+                    Description
+                    <span class="text-[#BABABA]">
+                        facultative
+                    </span>
+                </label>
+
+                <textarea class="border border-white rounded p-[10px] text-black text-white placeholder:text-[#BABABA]"
+                    id="description" placeholder="Résume la série en quelques mots..."></textarea>
+            </div>
+
+            <button class="bg-white text-black rounded-lg p-[10px]">
+                ＋ Ajouter la série
+            </button>
+        </section>
+
+        <section>
+            <div class="flex flex-col ml-[30px]">
+                <h3 class="text-white text-3xl ">
+                    Catalogue des séries
+                </h3>
+                <p class="text-white">
+                    Recherche par nom ou explore un genre.
+                </p>
+            </div>
+            <form
+                class="flex justify-between items-center border rounded-2xl bg-[#191919] ml-[30px] mr-[30px] p-[20px] gap-4">
+                <div class="flex flex-col">
+
+                    <label for="cherche" class="text-white"><strong>
+                            Recherche
+                        </strong>
+                    </label>
+
+                    <input class="border rounded p-[10px] text-white placeholder:text-[#BABABA]"
+                        placeholder="Ex. Breaking Bad" id="cherche" type="text">
+
+                </div>
+
+                <div class="flex flex-col">
+
+                    <label for="genrefilter" class="text-white"><strong>
+                            Genre
+                        </strong>
+                    </label>
+
+                    <input class="border rounded p-[10px] text-white placeholder:text-[#BABABA]"
+                        placeholder="Tous les genres" id="genrefilter" type="text">
+
+                </div>
+                <button class=" text-white border p-[5px] rounded h-fit">
+                    ↻ Réinitialiser
+                </button>
+            </form>
+        </section>
+        <div>
+            <p>
+                6 séries affichées
+            </p>
+        </div>
+        <section id="filmes" class="grid grid-cols-3 gap-4 m-8">
+                <!-- <article class=" border-1 border-white rounded-2xl">
+                    <div>
+                        <img src="assets/OIP.webp" alt="" class="w-full rounded-t-2xl">
+                    </div>
+                    <div class="text-white">
+                        <h2>Breaking Bad</h2>
+                        <p>
+                            Un professeur de chimie mène une double vie.
+                        </p>
+                    </div>
+                </article>
+
+                <article class=" border-1 border-white rounded-2xl">
+                    <div>
+                        <img src="assets/OIP.webp" alt="" class="w-full rounded-t-2xl">
+                    </div>
+                    <div class="text-white">
+                        <h2>Breaking Bad</h2>
+                        <p>
+                            Un professeur de chimie mène une double vie.
+                        </p>
+                    </div>
+                </article>
+
+                <article class=" border-1 border-white rounded-2xl">
+                    <div>
+                        <img src="assets/OIP.webp" alt="" class="w-full rounded-t-2xl">
+                    </div>
+                    <div class="text-white">
+                        <h2>Breaking Bad</h2>
+                        <p>
+                            Un professeur de chimie mène une double vie.
+                        </p>
+                    </div>
+                </article> -->
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
