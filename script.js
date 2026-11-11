@@ -45,6 +45,17 @@ function affecher(api) {
         const img = creerElement("img", "w-full rounded-t-2xl", "", element.image.original);
         div.append(img);
         article.append(div);
+        const div2 = creerElement("div", "text-white", "", "");
+        const h2 = creerElement("h2", "text-white text-xl", element.name, "");
+        const p = creerElement("p", "text-white", element.summary, "", "");
+
+        div2.append(h2);
+        element.genres.forEach(genre => {
+            const pgenre = creerElement("p","", genre, "");
+            div2.append(pgenre);
+        })
+        div2.append(p);
+        article.append(h2, p ,);
         section.append(article);
     });
 }
