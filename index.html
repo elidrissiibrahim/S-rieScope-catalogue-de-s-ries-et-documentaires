@@ -105,9 +105,11 @@
                         </strong>
                     </label>
 
-                    <input class="border rounded p-[10px] text-white placeholder:text-[#BABABA]"
-                        placeholder="Tous les genres" id="genrefilter" type="text">
-
+                    <select class="border rounded p-[10px] text-white" id="genrefilter">
+                        <option value="" selected class="text-black">
+                            Tous les genres
+                        </option>
+                    </select>
                 </div>
                 <button class=" text-white border p-[5px] rounded h-fit">
                     ↻ Réinitialiser
@@ -120,7 +122,7 @@
             </p>
         </div>
         <section id="filmes" class="grid grid-cols-3 gap-4 m-8">
-                <!-- <article class=" border-1 border-white rounded-2xl">
+            <!-- <article class=" border-1 border-white rounded-2xl">
                     <div>
                         <img src="assets/OIP.webp" alt="" class="w-full rounded-t-2xl">
                     </div>
