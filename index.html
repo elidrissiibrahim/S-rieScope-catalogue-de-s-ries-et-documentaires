@@ -26,7 +26,7 @@
             </p>
         </div>
 
-        <section class="border rounded-2xl bg-[#191919] ml-[30px] mr-[30px] p-[20px]">
+        <section class="border rounded-2xl bg-[#191919] mx-4 md:mx-[30px] p-4 md:p-[20px]">
 
             <h3 class="text-white font-bold">
                 Ajouter une série
@@ -35,7 +35,7 @@
             <p class="text-[#BABABA] mb-[20px]">
                 Les champs marqués d’un * sont obligatoires.
             </p>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="flex flex-col gap-[5px] mb-[15px]">
                     <label class="text-white" for="nom">
                         Nom de la série *
@@ -66,11 +66,11 @@
                     </span>
                 </label>
 
-                <textarea class="border border-white rounded p-[10px] text-black text-white placeholder:text-[#BABABA]"
+                <textarea class="border border-white rounded p-[10px] text-black text-white w-full placeholder:text-[#BABABA]"
                     id="description" placeholder="Résume la série en quelques mots..."></textarea>
             </div>
 
-            <button class="bg-white text-black rounded-lg p-[10px]">
+            <button id="ajouter" class="bg-white text-black rounded-lg p-[10px]">
                 ＋ Ajouter la série
             </button>
         </section>
@@ -84,8 +84,7 @@
                     Recherche par nom ou explore un genre.
                 </p>
             </div>
-            <form
-                class="flex justify-between items-center border rounded-2xl bg-[#191919] ml-[30px] mr-[30px] p-[20px] gap-4">
+            <form class="flex flex-col md:flex-row justify-between items-stretch md:items-center border rounded-2xl bg-[#191919] mx-4 md:mx-[30px] p-4 md:p-[20px] gap-4">
                 <div class="flex flex-col">
 
                     <label for="cherche" class="text-white"><strong>
@@ -111,7 +110,7 @@
                         </option>
                     </select>
                 </div>
-                <button class=" text-white border p-[5px] rounded h-fit">
+                <button id="reset" class=" text-white border p-[5px] rounded h-fit">
                     ↻ Réinitialiser
                 </button>
             </form>
@@ -121,7 +120,7 @@
                 6 séries affichées
             </p>
         </div>
-        <section id="filmes" class="grid grid-cols-3 gap-4 m-8">
+        <section id="filmes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-4 md:m-8">
             <!-- <article class=" border-1 border-white rounded-2xl">
                     <div>
                         <img src="assets/OIP.webp" alt="" class="w-full rounded-t-2xl">
