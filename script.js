@@ -1,3 +1,5 @@
+import {api} from "./src/services/api.js";
+
 const section = document.getElementById("filmes");
 const chercher = document.getElementById("cherche");
 const select = document.getElementById("genrefilter");
@@ -9,15 +11,13 @@ const reset = document.getElementById("reset");
 let tabGenres = [];
 
 async function recuperaionData() {
-    const data = await fetch("https://api.tvmaze.com/shows?page=0");
-    const response = await data.json();
-
-    const movies = response.slice(0, 20);
+    const data = await api.get;
+    affecher(data);  
 
     ColecteGenre(movies);
     affecherGenres();
 
-    affecher(movies);
+    
 
     chercher.addEventListener("input", () => {
         filtrer(movies);
@@ -63,7 +63,7 @@ function creerElement(tag, classList = "", content = "", src = null) {
 }
 function filtrer(data) {
     const resultat = data.filter(e =>
-        e.name.toLowerCase().includes(chercher.value.toLowerCase()) &&
+        e.name.toLowerCase().includes(chercher.value.toLowerCase()) && 
         (select.value === "" || e.genres.includes(select.value))
     );
 
@@ -104,9 +104,8 @@ function affecher(movies) {
     });
 }
 function ajouter(api) {
-
     const genres = genre.value.split(",").map(e => e.trim());
-
+    
     const newSerie = {
         name: nom.value,
         genres: genres,
