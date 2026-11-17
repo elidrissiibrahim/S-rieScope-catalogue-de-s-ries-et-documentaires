@@ -42,7 +42,7 @@ Sériescope/
 1. Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/elidrissiibrahim/S-rieScope-catalogue-de-s-ries-et-documentaires.git
 ```
 
 2. Open the project folder:
